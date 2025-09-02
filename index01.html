@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Meet Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-card">
+        <div id="auth-container">
+            <h1 class="card-title">Instant Meet</h1>
+            <p class="card-tagline">Login to generate a Google Meet link in one click.</p>
+            <a href="/auth/google" class="google-login-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google icon">
+                <span>Login with Google</span>
+            </a>
+        </div>
+
+        <div id="app-container" style="display: none;">
+            <div class="app-header">
+                <h1 class="card-title">New Meeting</h1>
+                <a href="/logout" class="logout-link" title="Logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
+            </div>
+            <button id="create-meeting-btn" class="create-meeting-btn">
+                <i class="fa-solid fa-video"></i> Create a New Meeting
+            </button>
+            <div id="result-container" class="result-container">
+                </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Meet Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <span class="poweredbysection">powered by <p>SnapKey CRM + Google Meet</p></span>
+        <img src="images/googlemeetherosection.jpg" alt="Company Logo">
+    </header>
+    <div class="page-wrapper">
+        <div class="static-links-container">
+            <div class="static-card static-card--active" data-link="https://meet.google.com/rxc-fwka-uav">
+                <img src="https://img.icons8.com/color/48/google-meet--v1.png" alt="meet-icon">
+                <h3 class="static-card-title">Bishwajit Tiwari</h3>
+                <p class="static-card-subtitle">Manager</p>
+            </div>
+            <div class="static-card" data-link="https://meet.google.com/hti-jzoi-eoc">
+                <img src="https://img.icons8.com/color/48/google-meet--v1.png" alt="meet-icon">
+                <h3 class="static-card-title">Development</h3>
+                <p class="static-card-subtitle">Remote D.</p>
+            </div>
+            <div class="static-card" data-link="https://meet.google.com/opd-ggig-qxk">
+                <img src="https://img.icons8.com/color/48/google-meet--v1.png" alt="meet-icon">
+                <h3 class="static-card-title">Interview</h3>
+                <p class="static-card-subtitle">training</p>
+            </div>
+            <div class="static-card" data-link="https://meet.google.com/oam-gkjg-ync">
+                <img src="https://img.icons8.com/color/48/google-meet--v1.png" alt="meet-icon">
+                <h3 class="static-card-title">Support</h3>
+                <p class="static-card-subtitle">Meetings</p>
+            </div>
+        </div>
+
+        <div class="app-card">
+            <div id="auth-container">
+                <h1 class="card-title">Instant Meet</h1>
+                <p class="card-tagline">Login to generate a Google Meet link in one click.</p>
+                <a href="/auth/google" class="google-login-btn">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google icon">
+                    <span>Login with Google</span>
+                </a>
+            </div>
+
+            <div id="app-container" style="display: none;">
+                <div class="app-header">
+                    <h1 class="card-title">New Meeting</h1>
+                    <a href="/logout" class="logout-link" title="Logout">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </a>
+                </div>
+                <button id="create-meeting-btn" class="create-meeting-btn">
+                    <i class="fa-solid fa-video"></i> Create a New Meeting
+                </button>
+                <div id="result-container" class="result-container">
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="static-link-modal" class="static-modal__overlay">
+        <div class="static-modal__content">
+            <div class="static-modal__header">
+                <h3 id="modal-title" class="static-modal__title">Meeting Details</h3>
+                <button id="modal-close-btn" class="static-modal__close-btn">&times;</button>
+            </div>
+            <div class="static-modal__body">
+                <p>Choose an action for this meeting link.</p>
+            </div>
+            <div class="static-modal__actions">
+                <button id="modal-copy-btn" class="static-modal__btn static-modal__btn--secondary">
+                    <i class="fa-solid fa-copy"></i> Copy Link
+                </button>
+                <a id="modal-open-btn" href="#" target="_blank" class="static-modal__btn static-modal__btn--primary">
+                    <i class="fa-solid fa-external-link-alt"></i> Open Link
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="toast-notification" class="toast"></div>
+    <script src="script.js"></script>
+</body>
+</html>

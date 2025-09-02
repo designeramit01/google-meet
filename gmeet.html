@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instant Meet Link Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button id="meet-generator-button" class="instant-meet__button">
+        <i class="fa-solid fa-video"></i>
+    </button>
+
+    <div id="meet-popup" class="instant-meet__popup">
+        <div class="instant-meet__header">
+            <h3>New Meeting</h3>
+            <button id="close-popup-button" class="instant-meet__close-button">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="instant-meet__body">
+            <div id="meet-link-container" class="instant-meet__link-container">
+                <p>Generating link...</p>
+            </div>
+            <div class="instant-meet__message-container">
+                <p><strong>Hi Team,</strong><br>Let's connect quickly. Please join the meeting using the link above.</p>
+            </div>
+            <button id="copy-info-button" class="instant-meet__copy-button">
+                <i class="fa-solid fa-copy"></i> Copy Meeting Info
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
